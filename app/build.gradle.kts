@@ -1,3 +1,4 @@
+// Quran Al-Karim App Gradle Build Configuration
 import com.google.gms.googleservices.GoogleServicesPlugin.MissingGoogleServicesStrategy
 
 plugins {

@@ -1,3 +1,6 @@
+# GitHub Actions CI Workflow for Quran Al-Karim Android App
+# Updated with Gradle wrapper validation settings
+
 name: Android CI Build
 
 on:
