@@ -4,7 +4,7 @@ import java.util.Base64
 
 plugins {
   alias(libs.plugins.android.application)
-  alias(libs.plugins.kotlin.android)   // Compiles your Kotlin sources (now version-managed by root)
+  alias(libs.plugins.kotlin.android)
   alias(libs.plugins.kotlin.compose)
   alias(libs.plugins.google.devtools.ksp)
   alias(libs.plugins.roborazzi)
@@ -71,10 +71,17 @@ android {
       }
     }
   }
+
   compileOptions {
     sourceCompatibility = JavaVersion.VERSION_11
     targetCompatibility = JavaVersion.VERSION_11
   }
+
+  // Force Kotlin and KSP to use JVM target 11 (matching Java)
+  kotlin {
+    jvmToolchain(11)
+  }
+
   buildFeatures {
     compose = true
     buildConfig = true
