@@ -1,0 +1,13 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Declare files that will always have LF line endings on checkout
+gradlew text eol=lf
+
+# Explicitly declare binary files to prevent Git CRLF corruption
+*.jar binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.keystore binary
